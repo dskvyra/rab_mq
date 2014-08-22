@@ -20,7 +20,6 @@ if __name__ == '__main__':
         print ' [.] fib(%s)' % (n,)
         response = cli.Message(str(fib(n)))
         response.properties['correlation_id'] = msg.correlation_id
-        response.properties['reply_to'] = msg.reply_to
         # import ipdb; ipdb.set_trace()
         msg.channel.basic_publish(exchange='',
                                   routing_key=msg.reply_to,
