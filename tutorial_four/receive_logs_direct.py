@@ -10,7 +10,6 @@ if __name__ == '__main__':
 
     result = channel.queue_declare(exclusive=True)
     queue_name = result[0]
-    # import ipdb; ipdb.set_trace()
 
     severities = sys.argv[1:]
     if not severities:
